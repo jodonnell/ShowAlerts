@@ -18,3 +18,5 @@ gem "devise", ">= 1.5.0"
 gem "twitter-bootstrap-rails"
 gem 'heroku'
 gem 'nokogiri', ">= 1.5.0"
+
+

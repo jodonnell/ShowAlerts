@@ -2,8 +2,7 @@ class ShowMailer < ActionMailer::Base
   default from: "noreply@showscomingup.com"
 
   def email_shows
-    matches = UsersShowAlert.find_matches
-    matches.group_by(&:user).each do |user, alerts|
+    UsersShowAlert.find_matches.group_by(&:user).each do |user, alerts|
       ShowMailer.email_show(user, alerts).deliver
     end
   end

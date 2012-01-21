@@ -39,14 +39,6 @@ describe BandsController do
     sign_in @user
   end
   
-  describe "GET index" do
-    it "assigns all bands as @bands" do
-      band = @user.bands.create! valid_attributes
-      get :index, {}
-      assigns(:bands).should eq([band])
-    end
-  end
-
   describe "GET new" do
     it "assigns a new band as @band" do
       get :new, {}

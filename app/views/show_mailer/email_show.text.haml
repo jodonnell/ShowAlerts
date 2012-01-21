@@ -1,2 +1,2 @@
 - @alerts.each do |alert|
-  = alert.show.bands
+  = "#{alert.show.bands} on #{alert.show.date.strftime("%B %d, %Y")} at #{alert.show.location}.  #{alert.show.tickets_link}"

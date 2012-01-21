@@ -2,5 +2,7 @@
 %html
   %head
   %body
-    - @alerts.each do |alert|
-      = alert.show.bands
+    %div
+      - @alerts.each do |alert|
+        = "#{alert.show.bands} on #{alert.show.date.strftime("%B %d, %Y")} at #{alert.show.location}.  #{alert.show.tickets_link}"
+        %br
