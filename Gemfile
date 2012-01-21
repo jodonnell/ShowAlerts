@@ -1,5 +1,3 @@
-require 'rbconfig'
-HOST_OS = RbConfig::CONFIG['host_os']
 source 'http://rubygems.org'
 gem 'rails', '3.1.3'
 group :assets do
@@ -8,9 +6,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
-if HOST_OS =~ /linux/i
-  gem 'therubyracer', '>= 0.9.8'
-end
 gem "haml", ">= 3.1.2"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "rspec-rails", ">= 2.8.0.rc1", :group => [:development, :test]
@@ -21,3 +16,4 @@ gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.3.3"
 gem "devise", ">= 1.5.0"
 gem "twitter-bootstrap-rails"
+gem 'heroku'
