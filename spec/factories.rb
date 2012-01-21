@@ -18,6 +18,6 @@ Factory.define :show do |s|
   s.bands 'M83'
   s.date Date.parse("2012/01/20")
   s.location 'Location'
-  s.tickets_link 'Tickets'
+  s.ticket_link 'Tickets'
 end
 

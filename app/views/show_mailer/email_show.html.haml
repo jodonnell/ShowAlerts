@@ -4,5 +4,5 @@
   %body
     %div
       - @alerts.each do |alert|
-        = "#{alert.show.bands} on #{alert.show.date.strftime("%B %d, %Y")} at #{alert.show.location}.  #{alert.show.tickets_link}"
+        = "#{alert.show.bands} on #{alert.show.date.strftime("%B %d, %Y")} at #{alert.show.location}.  #{alert.show.ticket_link}"
         %br

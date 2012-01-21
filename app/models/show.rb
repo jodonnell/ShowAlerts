@@ -3,7 +3,7 @@ class Show
   field :bands
   field :date, type: Date
   field :location
-  field :tickets_link
+  field :ticket_link
 
   has_many :users_show_alerts
 end
