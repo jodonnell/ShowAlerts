@@ -10,7 +10,7 @@ describe Scraper do
     html = File.read("spec/support/omr.html")
     
     scraper = Scraper.new html
-    scraper.parse_page.length.should == 559
+    scraper.parse_page.length.should == 11
   end
 
   it "should work with broken links" do
