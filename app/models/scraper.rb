@@ -15,6 +15,7 @@ class Scraper
       
       show = Show.where(:bands => bands, :date => date, :location => location, :ticket_link => ticket_link)
       show.create if show.first.nil?
+      show
     end
     shows.compact
   end

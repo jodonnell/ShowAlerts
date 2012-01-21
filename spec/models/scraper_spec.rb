@@ -6,7 +6,7 @@ describe Scraper do
 
   end
   
-  it "should create aind new instance given a valid attribute" do
+  it "should be able to parse pages correctly" do
     html = File.read("spec/support/omr.html")
     
     scraper = Scraper.new html
@@ -19,5 +19,13 @@ describe Scraper do
     scraper = Scraper.new bad_html
     scraper.parse_page.length.should == 1
   end
-  
+
+  it "should handle shows that it already has seen" do
+    html = File.read("spec/support/omr.html")
+    
+    scraper = Scraper.new html
+    scraper.parse_page.length.should == 11
+    scraper.parse_page.length.should == 11
+  end
+
 end
