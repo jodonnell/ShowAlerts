@@ -23,7 +23,8 @@ describe UsersShowAlert do
 
     it "should be able to find show matches just once" do
     UsersShowAlert.find_matches
-    UsersShowAlert.find_matches
+    matches = UsersShowAlert.find_matches
+    matches.count.should == 0
     UsersShowAlert.count.should == 1
   end
 

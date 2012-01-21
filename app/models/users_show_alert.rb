@@ -1,7 +1,7 @@
 class UsersShowAlert
   include Mongoid::Document
-  has_one :user
-  has_one :show
+  belongs_to :user
+  belongs_to :show
 
   def self.find_matches
     matches = []

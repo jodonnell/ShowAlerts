@@ -2,7 +2,7 @@ class BandsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @bands = Band.all
+    @bands = current_user.bands.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -11,7 +11,7 @@ class BandsController < ApplicationController
   end
 
   def new
-    @band = Band.new
+    @band = current_user.bands.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -20,7 +20,7 @@ class BandsController < ApplicationController
   end
 
   def create
-    @band = Band.new(params[:band])
+    @band = current_user.bands.new(params[:band])
 
     respond_to do |format|
       if @band.save
@@ -34,7 +34,7 @@ class BandsController < ApplicationController
   end
 
   def destroy
-    @band = Band.find(params[:id])
+    @band = current_user.bands.find(params[:id])
     @band.destroy
 
     respond_to do |format|
