@@ -4,5 +4,7 @@ class Show
   field :date, type: Date
   field :location
   field :tickets_link
+
+  has_many :users_show_alerts
 end
 
