@@ -1,0 +1,17 @@
+%h1 Listing bands
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @bands.each do |band|
+    %tr
+      %td= band.name
+      %td= link_to 'Delete', band, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Band', new_band_path
